@@ -1,0 +1,17 @@
+<p>
+  <a href="http://localhost:8080/auth/admin" target="_blank">Keycloak Admin</a>
+</p>
+<p>
+  <button (click)="login()">Login</button>
+</p>
+<p>
+  <button (click)="logout()">Logout</button>
+</p>
+<p>
+  <button (click)="fetchInfo()">Info</button>
+</p>
+
+<b *ngIf="isLoggedIn()">User: {{currentUser()}}</b>
+<b *ngIf="!isLoggedIn()">No User</b>
+
+<pre>{{info}}</pre>
